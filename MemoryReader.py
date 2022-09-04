@@ -44,6 +44,9 @@ class MemoryReader:
     def isPlayingASong(self):
             return self.isPlaying
 
+    def setPlayingASong(self, setter):
+        self.isPlaying = setter
+
     def getMisses(self):
         try:
             misses = read_int(self.process, self.missAddr)

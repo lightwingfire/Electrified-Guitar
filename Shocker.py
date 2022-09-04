@@ -3,7 +3,7 @@ import GuitarComm
 import subprocess
 from time import sleep
 
-subprocess.Popen("D:\\Program Files (x86)\\Steam\\steamapps\\common\\Rocksmith2014\\Rocksmith2014.exe")
+#subprocess.Popen("D:\\Program Files (x86)\\Steam\\steamapps\\common\\Rocksmith2014\\Rocksmith2014.exe")
 
 sleep(10)
 
@@ -21,6 +21,7 @@ while(True):
 
     while(rockSmith.isPlayingASong()):
         if guitar.pressedRestart():
+            rockSmith.setPlayingASong(False)
             break
         if misses<rockSmith.getMisses():
             misses = rockSmith.getMisses()

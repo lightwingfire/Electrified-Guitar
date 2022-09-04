@@ -33,7 +33,9 @@ class GuitarComm:
         print(self.arduino.readline())
 
     def pressedRestart(self):
-        if self.arduino.readline() == 'r':
+        button = self.arduino.readline().decode("utf-8")
+        if ("restart") in button:
+            print("pressed restart")
             return True
         else:
             return False
